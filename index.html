@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ctruh — The Infrastructure Layer for the Spatial Internet</title>
+  <meta name="description" content="Build, manage, and deploy high-performance immersive 3D and XR experiences in minutes — powered by Ctruh's proprietary no-code 3D engine and VersaAI." />
+  <meta name="theme-color" content="#04060f" />
+  <meta property="og:title" content="Ctruh — The Infrastructure Layer for the Spatial Internet" />
+  <meta property="og:description" content="Immersive 3D and XR experiences in minutes. No code, no apps, no downloads — powered by VersaAI and Ctruh's browser-native 3D engine." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23002DFF'/><circle cx='50' cy='50' r='18' fill='white'/></svg>" />
+</head>
+<body>
+
+  <!-- ambient 3D background -->
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- ══════════ Announcement + Nav ══════════ -->
+  <div class="announce">
+    <span class="announce-dot"></span>
+    Ctruh raised a $2.5M seed round&nbsp;🎉&nbsp;<a href="https://www.ctruh.com/resources/immersifyd/blogs/ctruh-raised-seed-fund" target="_blank" rel="noopener">Read the story →</a>
+  </div>
+
+  <header class="nav" id="nav">
+    <a class="logo" href="#top" aria-label="Ctruh home">
+      <span class="logo-mark" aria-hidden="true"><span></span></span>
+      CTRUH
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#studio">Studio</a>
+      <a href="#versa">VersaAI</a>
+      <a href="#engine">Why Ctruh</a>
+      <a href="#products">Products</a>
+      <a href="#industries">Industries</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="btn btn-primary btn-sm" data-demo>Book a Demo</button>
+    </div>
+    <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#studio">Studio</a>
+    <a href="#versa">VersaAI</a>
+    <a href="#engine">Why Ctruh</a>
+    <a href="#products">Products</a>
+    <a href="#industries">Industries</a>
+    <a href="#faq">FAQ</a>
+    <button class="btn btn-primary" data-demo>Book a Demo</button>
+  </div>
+
+  <main id="top">
+
+    <!-- ══════════ Hero ══════════ -->
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow reveal">
+          <span class="chip chip-glow">As seen on Shark Tank India</span>
+          <span class="chip">Backed by a $2.5M seed</span>
+        </p>
+        <h1 class="reveal d1">
+          The Infrastructure Layer for<br />
+          <span class="grad-text">the Spatial Internet.</span>
+        </h1>
+        <p class="hero-sub reveal d2">
+          Build, manage, and deploy high-performance immersive 3D and XR experiences
+          in minutes — powered by our proprietary no-code/low-code 3D engine and VersaAI.
+        </p>
+        <div class="hero-ctas reveal d3">
+          <button class="btn btn-primary btn-lg" data-demo>Book a Demo</button>
+          <a class="btn btn-ghost btn-lg" href="#studio">Explore Ctruh Studio</a>
+        </div>
+        <div class="hero-stats reveal d4">
+          <div><strong>100+</strong><span>D2C &amp; enterprise retailers</span></div>
+          <div><strong>~1 min</strong><span>image → production 3D</span></div>
+          <div><strong>0</strong><span>apps, installs, or code</span></div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#studio" aria-label="Scroll to content"><span></span></a>
+    </section>
+
+    <!-- ══════════ Use-case marquee ══════════ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>3D Walkthrough</span><i>✦</i><span>Virtual Try-On</span><i>✦</i><span>AR Experience</span><i>✦</i><span>3D Configurator</span><i>✦</i><span>Immersive Store</span><i>✦</i><span>3D Render</span><i>✦</i><span>3D Animation</span><i>✦</i><span>Learning &amp; Development</span><i>✦</i>
+        <span>3D Walkthrough</span><i>✦</i><span>Virtual Try-On</span><i>✦</i><span>AR Experience</span><i>✦</i><span>3D Configurator</span><i>✦</i><span>Immersive Store</span><i>✦</i><span>3D Render</span><i>✦</i><span>3D Animation</span><i>✦</i><span>Learning &amp; Development</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ══════════ Ctruh Studio ══════════ -->
+    <section class="section" id="studio">
+      <div class="section-head reveal">
+        <p class="kicker">CTRUH STUDIO</p>
+        <h2>One upload.<br /><span class="grad-text">Infinite possibilities.</span></h2>
+        <p class="lede">
+          The world's first AI-powered Unified XR Commerce Studio. From a single product
+          image, publish the full immersive suite — no 3D team, no code, no downloads.
+        </p>
+      </div>
+
+      <div class="studio-grid">
+        <div class="studio-modules reveal">
+          <button class="module is-active" data-color="#2D4DFF">
+            <span class="module-num">01</span>
+            <span class="module-body"><strong>3D Visualizer</strong><em>Interactive 3D, not flat photos. One model replaces twenty product shots.</em></span>
+          </button>
+          <button class="module" data-color="#4DE1FF">
+            <span class="module-num">02</span>
+            <span class="module-body"><strong>3D Configurator</strong><em>Let customers pick colours, materials, and variants in real time.</em></span>
+          </button>
+          <button class="module" data-color="#8B5CF6">
+            <span class="module-num">03</span>
+            <span class="module-body"><strong>Virtual Try-On</strong><em>GenAI-powered try-ons that cut fit-related returns by up to 40%.</em></span>
+          </button>
+          <button class="module" data-color="#FF6B4D">
+            <span class="module-num">04</span>
+            <span class="module-body"><strong>AR Viewer</strong><em>Drop life-size products into the customer's room from any browser.</em></span>
+          </button>
+          <button class="module" data-color="#3EE08F">
+            <span class="module-num">05</span>
+            <span class="module-body"><strong>Immersive Store</strong><em>A walkable 3D storefront on web and mobile — explore, browse, buy.</em></span>
+          </button>
+          <button class="module" data-color="#FFD34D">
+            <span class="module-num">06</span>
+            <span class="module-body"><strong>AI Creative</strong><em>On-brand marketing renders and ad creatives, generated from your 3D assets.</em></span>
+          </button>
+        </div>
+
+        <div class="studio-demo reveal d2">
+          <div class="demo-frame">
+            <div class="demo-topbar">
+              <span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span>
+              <span class="demo-title">studio.ctruh.com — swivel chair.glb</span>
+            </div>
+            <div class="demo-stage">
+              <canvas id="configurator"></canvas>
+              <span class="demo-hint" id="demoHint">↻ drag to spin — live 3D</span>
+              <span class="demo-badge">VersaAI · generated in ~1 min</span>
+            </div>
+            <div class="demo-controls">
+              <span class="demo-label">Finish</span>
+              <div class="swatches" id="swatches">
+                <button class="swatch is-active" style="--c:#2D4DFF" data-c="#2D4DFF" aria-label="Cobalt"></button>
+                <button class="swatch" style="--c:#FF6B4D" data-c="#FF6B4D" aria-label="Coral"></button>
+                <button class="swatch" style="--c:#3EE08F" data-c="#3EE08F" aria-label="Mint"></button>
+                <button class="swatch" style="--c:#FFD34D" data-c="#FFD34D" aria-label="Amber"></button>
+                <button class="swatch" style="--c:#F4F4F6" data-c="#F4F4F6" aria-label="Cloud"></button>
+              </div>
+              <span class="demo-note">This is the 3D Configurator — running in your browser right now.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="benefits reveal">
+        <div class="benefit"><h3>Higher conversion</h3><p>Customers who interact, convert. Interactive 3D and try-ons reduce uncertainty across product pages.</p></div>
+        <div class="benefit"><h3>Reduced returns</h3><p>When customers see exactly what they're buying — colour, scale, fit — they buy right the first time.</p></div>
+        <div class="benefit"><h3>Faster decisions</h3><p>One 3D model replaces twenty photos. No scrolling, no second-guessing, no email to support.</p></div>
+        <div class="benefit"><h3>Always on-brand</h3><p>Voice, logo, palette, and typography stay consistent across every product, page, and channel.</p></div>
+      </div>
+    </section>
+
+    <!-- ══════════ VersaAI ══════════ -->
+    <section class="section" id="versa">
+      <div class="section-head reveal">
+        <p class="kicker">VERSA AI</p>
+        <h2>Type it. <span class="grad-text">See it. Ship it.</span></h2>
+        <p class="lede">
+          VersaAI turns text prompts and 2D images into production-ready 3D models —
+          purpose-built for commerce, on the fly.
+        </p>
+      </div>
+      <div class="pipeline reveal">
+        <div class="pipe-step">
+          <div class="pipe-icon">⌨</div>
+          <span class="pipe-tag">Input</span>
+          <h3>Prompt or photo</h3>
+          <p>"Generate swivel chair" — or upload the product photos you already have.</p>
+        </div>
+        <div class="pipe-arrow" aria-hidden="true"><span></span></div>
+        <div class="pipe-step pipe-hero">
+          <div class="pipe-icon">◈</div>
+          <span class="pipe-tag">~1 minute</span>
+          <h3>VersaAI generates 3D</h3>
+          <p>High-resolution, production-ready models — textured, optimised, and ready to stream at 4K/8K.</p>
+        </div>
+        <div class="pipe-arrow" aria-hidden="true"><span></span></div>
+        <div class="pipe-step">
+          <div class="pipe-icon">⛶</div>
+          <span class="pipe-tag">Everywhere</span>
+          <h3>Deploy anywhere</h3>
+          <p>Website, mobile app, AR view, virtual store, Shopify, sales decks — built once, live everywhere.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ Why Ctruh / Engine ══════════ -->
+    <section class="section" id="engine">
+      <div class="section-head reveal">
+        <p class="kicker">WHY CTRUH</p>
+        <h2>We build the infrastructure.<br /><span class="grad-text">You show the experiences.</span></h2>
+        <p class="lede">
+          A rock-steady, blazing-fast proprietary 3D engine — browser-native, so heavy
+          experiences render in real time with no app, no installs, no lag.
+        </p>
+      </div>
+      <div class="engine-grid reveal">
+        <article class="ecard ecard-wide">
+          <h3>Proprietary browser-native 3D engine</h3>
+          <p>Patented virtual texturing and real-time asset caching stream high-fidelity 4K/8K XR experiences directly in-browser — across real estate, automotive, retail, and beyond.</p>
+          <div class="ecard-meter"><span></span></div>
+        </article>
+        <article class="ecard"><h3>No-code / low-code</h3><p>Drag, drop, publish. No coding or 3D design skills required — for anyone on your team.</p></article>
+        <article class="ecard"><h3>Real-time 3D infrastructure</h3><p>The networking architecture behind instant 3D generation and streaming of heavy experiences.</p></article>
+        <article class="ecard"><h3>Omnichannel by default</h3><p>Multichannel integration across Shopify, mobile apps, and your website — one asset, every surface.</p></article>
+        <article class="ecard"><h3>5X more affordable</h3><p>Dynamic XR experiences at a fraction of traditional 3D production cost.</p></article>
+        <article class="ecard"><h3>3X faster go-to-market</h3><p>High-quality XR experiences ready in days, not months — conceptualise, build, launch.</p></article>
+      </div>
+    </section>
+
+    <!-- ══════════ Results ══════════ -->
+    <section class="section section-results" id="results">
+      <div class="section-head reveal">
+        <p class="kicker">RESULTS</p>
+        <h2>Conversion <span class="grad-text">through experience.</span></h2>
+      </div>
+      <div class="counters reveal">
+        <div class="counter"><strong><span data-count="40">0</span>%</strong><span>fewer returns with virtual try-on</span></div>
+        <div class="counter"><strong><span data-count="27">0</span>%</strong><span>higher PDP conversion</span></div>
+        <div class="counter"><strong>2–3×</strong><span>longer dwell time with 3D/360 viewers</span></div>
+        <div class="counter"><strong><span data-count="3">0</span>×</strong><span>in-store conversion with IRIS smart mirrors</span></div>
+      </div>
+      <div class="quotes reveal">
+        <figure class="quote">
+          <blockquote>"Shoppers can now spin, zoom, and virtually wear every hoodie in 3D. Returns fell 38% and our PDP conversion jumped 27% in the first six weeks."</blockquote>
+          <figcaption>Head of E-Commerce · apparel brand</figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>"Ctruh's 3D viewer lets buyers drop life-size sofas into their living room. Engagement per product shot up 250% and cart abandonment on high-ticket items dropped 21%."</blockquote>
+          <figcaption>Digital Experience Lead · furniture retailer</figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>"Engagement per session tripled and return rates dropped by 28% within weeks. This isn't just a feature — it's now core to how we sell."</blockquote>
+          <figcaption>Chief Marketing Officer · beauty platform</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ══════════ Product suite ══════════ -->
+    <section class="section" id="products">
+      <div class="section-head reveal">
+        <p class="kicker">THE SUITE</p>
+        <h2>Four products. <span class="grad-text">One spatial stack.</span></h2>
+      </div>
+      <div class="products-grid reveal">
+        <article class="pcard pcard-featured">
+          <span class="pcard-tag">Flagship</span>
+          <h3>Ctruh Studio</h3>
+          <p>The AI-powered Unified XR Commerce Studio. Generate 3D models, manage assets, and ship try-ons, AR, configurators, and immersive stores from a single platform.</p>
+          <a href="#studio" class="pcard-link">See it in action ↑</a>
+        </article>
+        <article class="pcard">
+          <h3>Ctruh 3D Editor</h3>
+          <p>A no-code, browser-based 3D editor with 120+ scene templates, a huge texture library, and real-time lighting.</p>
+        </article>
+        <article class="pcard">
+          <h3>Ctruh Marketplace</h3>
+          <p>Ready-made 3D assets, environments, and templates to accelerate every build.</p>
+        </article>
+        <article class="pcard">
+          <h3>Ctruh IRIS</h3>
+          <p>Smart magic mirrors for physical retail — instant virtual try-on for apparel, beauty, eyewear, and jewellery, right in-store.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══════════ Industries ══════════ -->
+    <section class="section" id="industries">
+      <div class="section-head reveal">
+        <p class="kicker">INDUSTRIES</p>
+        <h2>Built once. <span class="grad-text">Deployed everywhere.</span></h2>
+        <p class="lede">From retail to real estate — interactive 3D tailored to every industry's needs.</p>
+      </div>
+      <div class="industries-grid reveal">
+        <div class="icard"><span>🛍</span><h3>Retail &amp; E-Commerce</h3><p>Virtual stores, try-ons, and 3D product pages that convert.</p></div>
+        <div class="icard"><span>🚗</span><h3>Automotive</h3><p>Virtual showrooms and photoreal configurators for every trim.</p></div>
+        <div class="icard"><span>🏙</span><h3>Real Estate</h3><p>Immersive property walkthroughs — before the first brick.</p></div>
+        <div class="icard"><span>🧭</span><h3>Tourism</h3><p>Destination previews and virtual tours that inspire bookings.</p></div>
+        <div class="icard"><span>🩺</span><h3>Healthcare</h3><p>Spatial training, education, and patient experiences.</p></div>
+        <div class="icard"><span>🏢</span><h3>Enterprise</h3><p>Learning &amp; development, digital twins, and internal XR tools.</p></div>
+      </div>
+    </section>
+
+    <!-- ══════════ FAQ ══════════ -->
+    <section class="section section-narrow" id="faq">
+      <div class="section-head reveal">
+        <p class="kicker">FAQ</p>
+        <h2>Frequently asked <span class="grad-text">questions.</span></h2>
+      </div>
+      <div class="faq-list reveal">
+        <details open>
+          <summary>What is Ctruh?<i></i></summary>
+          <p>Ctruh is the infrastructure layer for the spatial internet — a deep-tech platform that makes 3D, AR, and XR accessible to every business. Powered by a browser-native 3D engine and VersaAI, it turns images, text, and product photos into production-ready 3D assets and immersive experiences in minutes, with no installs, no SDKs, and no specialized hardware.</p>
+        </details>
+        <details>
+          <summary>What is Ctruh Studio?<i></i></summary>
+          <p>Ctruh Studio is an AI-powered platform for creating and managing interactive 3D experiences. Generate 3D models, manage assets, and build immersive commerce — try-ons, AR viewers, configurators, immersive stores, and AI creatives — from a single platform.</p>
+        </details>
+        <details>
+          <summary>How does text-to-3D and image-to-3D work?<i></i></summary>
+          <p>VersaAI, our proprietary AI engine, converts a text prompt or a single product image into a high-resolution, production-ready 3D model in about a minute — textured, optimised, and ready to deploy.</p>
+        </details>
+        <details>
+          <summary>Do I need coding or 3D design skills?<i></i></summary>
+          <p>No. Ctruh is no-code/low-code end to end — anyone on your team can create, customise, and publish immersive experiences with drag-and-drop tools.</p>
+        </details>
+        <details>
+          <summary>Does it work on mobile, AR, and VR devices?<i></i></summary>
+          <p>Yes. Experiences are WebXR-native and device-agnostic — they load in any browser from a link or QR code, with no app or SDK required.</p>
+        </details>
+        <details>
+          <summary>Is Ctruh enterprise-ready?<i></i></summary>
+          <p>Yes — Ctruh serves 100+ D2C and enterprise retailers with secure, scalable infrastructure and integrations into your existing systems, including Shopify and your own apps.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══════════ Final CTA ══════════ -->
+    <section class="final-cta" id="demo">
+      <div class="final-inner reveal">
+        <h2>Ready to bring your<br /><span class="grad-text">product to life?</span></h2>
+        <p>See Ctruh Studio on your own products — live, in your browser, in under 30 minutes.</p>
+        <button class="btn btn-primary btn-lg" data-demo>Book a Demo</button>
+        <span class="final-note">No app. No code. No downloads.</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════ Footer ══════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="logo" href="#top"><span class="logo-mark"><span></span></span>CTRUH</a>
+        <p class="footer-tag">Pronounced <em>See-Through</em>.</p>
+        <p class="footer-copy">The infrastructure layer for the spatial internet.</p>
+      </div>
+      <div class="footer-cols">
+        <div><h4>Products</h4><a href="#studio">Ctruh Studio</a><a href="#products">3D Editor</a><a href="#products">Marketplace</a><a href="#products">IRIS</a></div>
+        <div><h4>Use cases</h4><a href="#studio">Virtual Try-On</a><a href="#studio">3D Configurator</a><a href="#studio">AR Experience</a><a href="#studio">3D Walkthrough</a></div>
+        <div><h4>Industries</h4><a href="#industries">Retail / E-Commerce</a><a href="#industries">Automotive</a><a href="#industries">Real Estate</a><a href="#industries">Healthcare</a></div>
+        <div><h4>Company</h4><a href="https://www.ctruh.com/about/company/about-us" target="_blank" rel="noopener">About us</a><a href="https://www.ctruh.com/about/company/contact-us" target="_blank" rel="noopener">Contact</a><a href="https://www.ctruh.com/about/careers/values-and-culture#openings" target="_blank" rel="noopener">Careers — we're hiring!</a><a href="https://www.ctruh.com/resources/immersifyd" target="_blank" rel="noopener">ImmersiFYD</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ctruh Technologies Pvt. Ltd.</span>
+      <span><a href="https://www.ctruh.com/privacy-policy" target="_blank" rel="noopener">Privacy</a> · <a href="https://www.ctruh.com/terms-of-service" target="_blank" rel="noopener">Terms</a> · <a href="https://www.linkedin.com/company/ctruh/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.instagram.com/ctruh.official" target="_blank" rel="noopener">Instagram</a></span>
+    </div>
+  </footer>
+
+  <!-- ══════════ Book a Demo modal ══════════ -->
+  <div class="modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoTitle" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card">
+      <button class="modal-x" data-close aria-label="Close">✕</button>
+      <div class="modal-body" id="demoFormWrap">
+        <p class="kicker">BOOK A DEMO</p>
+        <h3 id="demoTitle">See your products in 3D — live.</h3>
+        <p class="modal-sub">Tell us where to reach you and we'll set up a 30-minute walkthrough of Ctruh Studio on your own catalogue.</p>
+        <form id="demoForm" novalidate>
+          <label>Full name<input type="text" name="name" placeholder="Priya Sharma" required /></label>
+          <label>Work email<input type="email" name="email" placeholder="you@company.com" required /></label>
+          <label>Company<input type="text" name="company" placeholder="Acme Retail" required /></label>
+          <label>Industry
+            <select name="industry">
+              <option>Retail / E-Commerce</option>
+              <option>Automotive</option>
+              <option>Real Estate</option>
+              <option>Tourism</option>
+              <option>Healthcare</option>
+              <option>Enterprise / Other</option>
+            </select>
+          </label>
+          <button class="btn btn-primary btn-lg" type="submit">Request my demo</button>
+          <span class="form-note">We respond immediately — usually the same day.</span>
+        </form>
+      </div>
+      <div class="modal-body modal-success" id="demoSuccess" hidden>
+        <div class="success-orb"><span>✓</span></div>
+        <h3>You're booked in.</h3>
+        <p class="modal-sub">Thanks — our team will reach out shortly to schedule your walkthrough. Meanwhile, keep spinning the chair. 🪑</p>
+        <button class="btn btn-ghost" data-close>Back to the site</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="importmap">{ "imports": { "three": "./vendor/three.module.js" } }</script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
